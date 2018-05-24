@@ -29,6 +29,7 @@ package com.domwires.example.simplemvc.view
 		private var firstNameLabel:Label;
 		private var lastNameLabel:Label;
 		private var ageLabel:Label;
+		private var streetLabel:Label;
 
 		[PostConstruct]
 		public function init():void
@@ -42,12 +43,14 @@ package com.domwires.example.simplemvc.view
 			firstNameLabel = createForm("First name:", layoutGroup, onFirstNameClicked);
 			lastNameLabel = createForm("Last name:", layoutGroup, onLastNameClicked);
 			ageLabel = createForm("Age:", layoutGroup, onAgeClicked);
+			streetLabel=createForm("Street",layoutGroup,onStreetClicked);
 
 			viewContainer.addChild(layoutGroup);
 
 			addMessageListener(AppModelMessage.FIRST_NAME_CHANGED, firstNameChanged);
 			addMessageListener(AppModelMessage.LAST_NAME_CHANGED, lastNameChanged);
 			addMessageListener(AppModelMessage.AGE_CHANGED, ageNameChanged);
+			addMessageListener(AppModelMessage.STREET_CHANGED, streetChanged);
 		}
 
 		private function ageNameChanged(m:IMessage):void
@@ -63,6 +66,11 @@ package com.domwires.example.simplemvc.view
 		private function firstNameChanged(m:IMessage):void
 		{
 			firstNameLabel.text = model.firstName;
+		}
+
+		private function streetChanged(m:IMessage):void
+		{
+			streetLabel.text=model.street;
 		}
 
 		private function createForm(label:String, group:LayoutGroup, onClick:Function):Label
@@ -105,6 +113,11 @@ package com.domwires.example.simplemvc.view
 		private function onAgeClicked():void
 		{
 			dispatchMessage(AppViewMessage.AGE_CLICKED, null, true);
+		}
+
+		private function onStreetClicked():void
+		{
+			dispatchMessage(AppViewMessage.STREET_CLICKED, null, true);
 		}
 	}
 }
