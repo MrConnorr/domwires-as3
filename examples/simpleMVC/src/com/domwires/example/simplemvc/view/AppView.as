@@ -30,7 +30,6 @@ package com.domwires.example.simplemvc.view
 		private var lastNameLabel:Label;
 		private var ageLabel:Label;
 		private var streetLabel:Label;
-    
 		[PostConstruct]
 		public function init():void
 		{
@@ -119,7 +118,6 @@ package com.domwires.example.simplemvc.view
 		{
 			dispatchMessage(AppViewMessage.AGE_CLICKED, null, true);
 		}
-    
 		private function onStreetClicked():void
 		{
 			dispatchMessage(AppViewMessage.STREET_CLICKED, null, true);
