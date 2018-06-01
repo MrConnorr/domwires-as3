@@ -64,6 +64,7 @@ package com.domwires.example.simplemvc.model
 		public function get street():String
 		{
 			return _street;
+
 		}
 	}
 }

@@ -12,6 +12,7 @@ package com.domwires.example.simplemvc.context
 	import com.domwires.example.simplemvc.commands.GenerateFirstNameCommand;
 	import com.domwires.example.simplemvc.commands.GenerateLastNameCommand;
 	import com.domwires.example.simplemvc.commands.GenerateStreetCommand;
+  
 	import com.domwires.example.simplemvc.model.AppModel;
 	import com.domwires.example.simplemvc.model.IAppModel;
 	import com.domwires.example.simplemvc.model.IAppModelImmutable;
