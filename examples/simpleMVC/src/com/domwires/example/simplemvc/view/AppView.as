@@ -42,7 +42,7 @@ package com.domwires.example.simplemvc.view
 			firstNameLabel = createForm("First name:", layoutGroup, onFirstNameClicked);
 			lastNameLabel = createForm("Last name:", layoutGroup, onLastNameClicked);
 			ageLabel = createForm("Age:", layoutGroup, onAgeClicked);
-			streetLabel=createForm("Street",layoutGroup,onStreetClicked);
+			streetLabel = createForm("Street", layoutGroup, onStreetClicked);
 
 			viewContainer.addChild(layoutGroup);
 
@@ -66,15 +66,10 @@ package com.domwires.example.simplemvc.view
 		{
 			firstNameLabel.text = model.firstName;
 		}
-		
-		private function сountryNameChanged(m:IMessage):void
-		{
-			countryLabel.text = model.country.toString();
-		}
 
 		private function streetChanged(m:IMessage):void
 		{
-			streetLabel.text=model.street;
+			streetLabel.text = model.street;
 		}
 
 		private function createForm(label:String, group:LayoutGroup, onClick:Function):Label
